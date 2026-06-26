@@ -1,0 +1,33 @@
+2026-06-26 15:45:28,349 - verify_phase1 - INFO - [verify_phase1.py:144] - Starting verification suite...
+2026-06-26 15:45:28,351 - verify_phase1 - INFO - [verify_phase1.py:39] - --- Running Scenario 1: Valid APK ---
+2026-06-26 15:45:28,351 - analyzers.apk_validator - INFO - [apk_validator.py:43] - Starting APK validation for samples.apk
+2026-06-26 15:45:28,352 - analyzers.apk_validator - WARNING - [apk_validator.py:63] - APK validation failed at stage 'zip_integrity_check': File is not a valid ZIP archive
+2026-06-26 15:45:57,066 - verify_phase1 - INFO - [verify_phase1.py:144] - Starting verification suite...
+2026-06-26 15:45:57,068 - verify_phase1 - INFO - [verify_phase1.py:149] - Sample APK is missing or empty. Generating a valid dummy APK at C:\Users\jishn\OneDrive\Desktop\Jishnu\Hackathons\BOIxIITH\CyberVerdict\CyberVerdict-v1.0\Analysis_Engine\samples\samples.apk
+2026-06-26 15:45:57,072 - verify_phase1 - INFO - [verify_phase1.py:39] - --- Running Scenario 1: Valid APK ---
+2026-06-26 15:45:57,072 - analyzers.apk_validator - INFO - [apk_validator.py:43] - Starting APK validation for samples.apk
+2026-06-26 15:45:57,103 - analyzers.apk_validator - INFO - [apk_validator.py:52] - APK validation completed successfully for samples.apk
+2026-06-26 15:45:57,104 - analyzers.hash_generator - INFO - [hash_generator.py:47] - Generating hashes for APK: samples.apk
+2026-06-26 15:45:57,104 - analyzers.hash_generator - INFO - [hash_generator.py:90] - Successfully computed hashes for samples.apk (SHA-256: edfb60f818e98d63e7904d5e0df37affe41ef96a5d4b01e2c736a8b4ee1c3553)
+2026-06-26 15:45:57,104 - analyzers.apk_parser - INFO - [apk_parser.py:36] - Initializing APKParser for samples.apk
+2026-06-26 15:45:57,106 - analyzers.apk_parser - INFO - [apk_parser.py:127] - Enumerate DEX files inside APK
+2026-06-26 15:45:57,106 - analyzers.apk_parser - INFO - [apk_parser.py:182] - Extracting raw AndroidManifest.xml binary bytes
+2026-06-26 15:45:57,106 - analyzers.apk_parser - INFO - [apk_parser.py:148] - Reading file bytes for: AndroidManifest.xml
+2026-06-26 15:45:57,107 - verify_phase1 - INFO - [verify_phase1.py:70] - Scenario 1 Passed!
+2026-06-26 15:45:57,107 - verify_phase1 - INFO - [verify_phase1.py:71] - Computed SHA-256: edfb60f818e98d63e7904d5e0df37affe41ef96a5d4b01e2c736a8b4ee1c3553
+2026-06-26 15:45:57,107 - verify_phase1 - INFO - [verify_phase1.py:72] - Computed Size: 426 bytes
+2026-06-26 15:45:57,107 - verify_phase1 - INFO - [verify_phase1.py:73] - Found 3 files and 1 DEX files.
+2026-06-26 15:45:57,107 - verify_phase1 - INFO - [verify_phase1.py:78] - --- Running Scenario 2: Corrupted ZIP ---
+2026-06-26 15:45:57,108 - analyzers.apk_validator - INFO - [apk_validator.py:43] - Starting APK validation for corrupted.apk
+2026-06-26 15:45:57,123 - analyzers.apk_validator - WARNING - [apk_validator.py:63] - APK validation failed at stage 'zip_integrity_check': File is not a valid ZIP archive
+2026-06-26 15:45:57,123 - analyzers.apk_parser - INFO - [apk_parser.py:36] - Initializing APKParser for corrupted.apk
+2026-06-26 15:45:57,124 - verify_phase1 - INFO - [verify_phase1.py:100] - Scenario 2 Passed!
+2026-06-26 15:45:57,124 - verify_phase1 - INFO - [verify_phase1.py:105] - --- Running Scenario 3: APK missing AndroidManifest.xml ---
+2026-06-26 15:45:57,126 - analyzers.apk_validator - INFO - [apk_validator.py:43] - Starting APK validation for missing_manifest.apk
+2026-06-26 15:45:57,158 - analyzers.apk_validator - WARNING - [apk_validator.py:63] - APK validation failed at stage 'manifest_existence_check': Mandatory AndroidManifest.xml file is missing from the APK root.
+2026-06-26 15:45:57,158 - verify_phase1 - INFO - [verify_phase1.py:120] - Scenario 3 Passed!
+2026-06-26 15:45:57,158 - verify_phase1 - INFO - [verify_phase1.py:125] - --- Running Scenario 4: APK missing classes.dex ---
+2026-06-26 15:45:57,159 - analyzers.apk_validator - INFO - [apk_validator.py:43] - Starting APK validation for missing_dex.apk
+2026-06-26 15:45:57,179 - analyzers.apk_validator - WARNING - [apk_validator.py:63] - APK validation failed at stage 'dex_existence_check': Mandatory classes.dex file is missing from the APK.
+2026-06-26 15:45:57,179 - verify_phase1 - INFO - [verify_phase1.py:140] - Scenario 4 Passed!
+2026-06-26 15:45:57,180 - verify_phase1 - INFO - [verify_phase1.py:167] - All verification scenarios completed successfully!
